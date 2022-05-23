@@ -6,4 +6,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="NewFolder\**" />
+    <EmbeddedResource Remove="NewFolder\**" />
+    <None Remove="NewFolder\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\financeiro.dominio\Financeiro.Dominio.csproj" />
+    <ProjectReference Include="..\financeiro.infraestrutura\Financeiro.InfraEstrutura.csproj" />
+    <ProjectReference Include="..\financeiro.recursoscompartilhados\Financeiro.RecursosCompartilhados.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Contratos\InfraEstrutura\" />
+    <Folder Include="Contratos\Servicos\" />
+    <Folder Include="Servicos\Comandos\Entradas\" />
+    <Folder Include="Servicos\Comandos\Saidas\" />
+  </ItemGroup>
+
 </Project>
